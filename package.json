@@ -4,7 +4,8 @@
   "description": "TestCafe framwork",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "run_tests": "npx testcafe --config-file Config/.testcaferc.js --reporter html:Reports/TestCafe_reporter_html/index.html"
   },
   "repository": {
     "type": "git",
@@ -17,6 +18,8 @@
   },
   "homepage": "https://github.com/raheelimran-10P/TestCafeFramework#readme",
   "devDependencies": {
-    "testcafe": "^2.1.0"
+    "@ffmpeg-installer/ffmpeg": "^1.1.0",
+    "testcafe": "^2.1.0",
+    "testcafe-reporter-html": "^1.4.6"
   }
 }
