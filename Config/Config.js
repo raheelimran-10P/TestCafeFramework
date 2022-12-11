@@ -2,7 +2,9 @@ const Config = {
 
     "URLs": {
         "DemoQAURL": 'https://demoqa.com',
-        "PracticeFormURL": 'https://demoqa.com/automation-practice-form'
+        "PracticeFormURL": 'https://demoqa.com/automation-practice-form',
+        "BrowserWindowURL": 'https://demoqa.com/browser-windows',
+        "GoogleURL": 'https://www.google.com/',
 
     },
     "FormData": {
