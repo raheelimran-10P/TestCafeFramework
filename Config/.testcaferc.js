@@ -36,7 +36,7 @@ module.exports = {
     videoPath: "Reports/Videos",
     videoOptions: {
         singleFile: true,
-        failedOnly: true,
+        failedOnly: false,
         pathPattern: "${TEST_INDEX}/${USERAGENT}/${FILE_INDEX}.mp4"
     }
 }

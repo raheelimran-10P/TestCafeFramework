@@ -3,7 +3,6 @@ TestCafe Framework using POM
 
 ## Setup
 This project requires an up-to-date version of Node
-It also uses [conda](https://docs.conda.io) to manage packages.
 
 To set up this project on your local machine:
 1. Clone it from this GitHub repository and open the project in the VS code and open terminal in it.
