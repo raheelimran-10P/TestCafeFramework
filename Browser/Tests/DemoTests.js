@@ -1,3 +1,4 @@
+import BrowserWindowPage from '../Pages/BrowserWindowPage';
 import ToolsQAPracticePage from '../Pages/ToolsQAPracticePage';
 const Config = require('../../Config/Config')
 
@@ -5,7 +6,7 @@ const Config = require('../../Config/Config')
 fixture `Tools QA Practice Page Auatomation`
    
 
-test('1) OPen the page', async t => {
+test('1) Register the form', async t => {
 
     await ToolsQAPracticePage.SubmitForm(
         Config.Config.FormData.firstName,
@@ -16,11 +17,37 @@ test('1) OPen the page', async t => {
 .page(Config.Config.URLs.PracticeFormURL)
 .meta('smoke', 'true').meta('platform', 'Web')
 
-test.skip('2) OPen the page', async t => {
+test.skip('2) Skip demo test', async t => {
 
     await t.takeScreenshot()
 
 })
 .meta('smoke', 'true').meta('platform', 'Web')
+
+test('3) Perform the new tab and new window', async t => {
+
+    await BrowserWindowPage.OpenNewTab(Config.Config.URLs.GoogleURL)
+    const url = await t.eval(() => document.documentURI);
+    await t.expect(url).eql(Config.Config.URLs.GoogleURL);
+
+})
+.page(Config.Config.URLs.BrowserWindowURL)
+.meta('smoke', 'true').meta('platform', 'Web')
+
+test('4) Perform Hover click', async t => {
+    await t
+    .hover('#toolTipButton')
+    //.expect(Selector('.buttonToolTip').visible).ok()
+})
+.page(Config.Config.URLs.DemoQAURL+'/tool-tips')
+.meta('smoke', 'true').meta('platform', 'Web')
+
+
+test('5) Perform the Drag And Drop', async t => {
+    await t.dragToElement('#draggable','#droppable')
+})
+.page(Config.Config.URLs.DemoQAURL+'/droppable')
+.meta('smoke', 'true').meta('platform', 'Web')
+
 
 
